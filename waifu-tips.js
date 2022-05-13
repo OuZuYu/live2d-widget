@@ -3,7 +3,7 @@
  * https://github.com/stevenjoezhang/live2d-widget
  */
 import io from './socket.io'
-
+console.log('io', io);
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
@@ -291,7 +291,7 @@ function initWidget(config, apiPath) {
 	/*
       监听送礼，播报感谢！
   */
- 	console.log(io);
+ 	// console.log(io);
 	/* io.on("gift", ({ avatar, user, giftName, giftImg }) => {
 		console.log('看板娘收到礼物：', avatar, user, giftName, giftImg)
 	}) */
