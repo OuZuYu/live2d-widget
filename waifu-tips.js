@@ -292,7 +292,7 @@ function initWidget(config, apiPath) {
       监听送礼，播报感谢！
   */
  	console.log(io);
-	io.on("gift", ({ avatar, user, giftName, giftImg }) => {
+	/* io.on("gift", ({ avatar, user, giftName, giftImg }) => {
 		console.log('看板娘收到礼物：', avatar, user, giftName, giftImg)
-	})
+	}) */
 }
