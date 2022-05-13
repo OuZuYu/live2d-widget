@@ -293,6 +293,6 @@ function initWidget(config, apiPath) {
   */
  	console.log(io);
 	io.on("gift", ({ avatar, user, giftName, giftImg }) => {
-		console.log('礼物：', avatar, user, giftName, giftImg)
+		console.log('看板娘收到礼物：', avatar, user, giftName, giftImg)
 	})
 }
