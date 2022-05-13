@@ -291,7 +291,8 @@ function initWidget(config, apiPath) {
 	/*
       监听送礼，播报感谢！
   */
-	this.socket.on("gift", ({ avatar, user, giftName, giftImg }) => {
+ 	console.log(io);
+	io.on("gift", ({ avatar, user, giftName, giftImg }) => {
 		console.log('礼物：', avatar, user, giftName, giftImg)
 	})
 }
