@@ -2,6 +2,7 @@
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
  */
+import io from './socket.io'
 
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
@@ -42,7 +43,7 @@ function loadWidget(config) {
 	let userAction = false,
 		userActionTimer,
 		messageTimer,
-		messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "记得把小家加入 Adblock 白名单哦！"];
+		messageArray = ["欢迎进入直播间！一起学习吧！", "关注一下我嘛～", "评论区里写下你的答案哦，我会批改的~", "感谢大家送的礼物呀！", "家人们~"];
 	window.addEventListener("mousemove", () => userAction = true);
 	window.addEventListener("keydown", () => userAction = true);
 	setInterval(() => {
@@ -287,4 +288,10 @@ function initWidget(config, apiPath) {
 	} else {
 		loadWidget(config);
 	}
+	/*
+      监听送礼，播报感谢！
+  */
+	this.socket.on("gift", ({ avatar, user, giftName, giftImg }) => {
+		console.log('礼物：', avatar, user, giftName, giftImg)
+	})
 }
