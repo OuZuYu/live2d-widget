@@ -2,8 +2,8 @@
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
  */
-import io from './socket.io'
-console.log('io', io);
+// import io from './socket.io'
+// console.log('io', io);
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
